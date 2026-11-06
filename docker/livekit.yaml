@@ -1,0 +1,5 @@
+﻿port: 7880
+keys:
+  devkey: secret_dev_key_123456789
+logging:
+  level: debug
