@@ -37,12 +37,14 @@ export const ModerationDashboard: React.FC = () => {
     }, 500);
   }, []);
 
-  const handleAction = (reportId: string, action: 'WARN' | 'SUSPEND' | 'DISMISS') => {
-    alert(Acción \ ejecutada sobre el reporte \);
+  const handleAction = (reportId: string, action: string) => {
+    alert(`Acción ${action} ejecutada sobre el reporte ${reportId}`);
     setReports(reports.filter((r) => r.id !== reportId));
   };
 
-  if (loading) return <div style={{ padding: '20px', color: '#fff' }}>Cargando panel de moderación...</div>;
+  if (loading) {
+    return <div style={{ padding: '20px', color: '#fff' }}>Cargando panel de moderación...</div>;
+  }
 
   return (
     <div style={{ padding: '30px', backgroundColor: '#0f172a', minHeight: '100vh', color: '#f8fafc', fontFamily: 'sans-serif' }}>
